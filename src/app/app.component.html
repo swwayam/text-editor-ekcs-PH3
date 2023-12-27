@@ -1,11 +1,38 @@
-<!-- Navbar -->
+<!--Navbar-->
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">TextInfo</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  
+  <!--Home-->
+  <div class="editor-form">
+    <textarea class="edit-area" #txtArea cols="170" rows="15" placeholder="Please Enter Your Text Here..."></textarea>
+    <div class="ctr-btn">
+      <!-- <button type="submit" class="cmd-button btn btn-outline-dark" (click)="upperCase(txtArea)">Captilize All Text</button> -->
 
 
 
-<!-- Home -->
+      <app-btn (clicked)="upperCase(txtArea)" [btnTxt]="'Capitilize All Text'" [bsClass]="'btn btn-primary cmd-button'"></app-btn>
+
+      <app-btn (clicked)="lowerCase(txtArea)" [btnTxt]="'Lower All Text'"></app-btn>
+
+      <app-btn (clicked)="charCount(txtArea)" [btnTxt]="'Character Count'"></app-btn>
+
+
+      <!-- <button type="submit" class="cmd-button btn btn-outline-dark">First Character Capital</button>
+      <button type="submit" class="cmd-button btn btn-outline-dark">Copy All Text</button>
+      <button type="submit" class="cmd-button btn btn-outline-dark">Character Count</button>
+      <button type="submit" class="cmd-button btn btn-outline-dark">Word Count</button> -->
+    </div>
+  </div>
 
 
 
 
 
-<!-- About Us -->
+  
