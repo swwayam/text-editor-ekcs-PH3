@@ -1,38 +1,71 @@
 <!--Navbar-->
 <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand">TextInfo</a>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-  
-  <!--Home-->
-  <div class="editor-form">
-    <textarea class="edit-area" #txtArea cols="170" rows="15" placeholder="Please Enter Your Text Here..."></textarea>
-    <div class="ctr-btn">
-      <!-- <button type="submit" class="cmd-button btn btn-outline-dark" (click)="upperCase(txtArea)">Captilize All Text</button> -->
-
-
-
-      <app-btn (clicked)="upperCase(txtArea)" [btnTxt]="'Capitilize All Text'" [bsClass]="'btn btn-primary cmd-button'"></app-btn>
-
-      <app-btn (clicked)="lowerCase(txtArea)" [btnTxt]="'Lower All Text'"></app-btn>
-
-      <app-btn (clicked)="charCount(txtArea)" [btnTxt]="'Character Count'"></app-btn>
-
-
-      <!-- <button type="submit" class="cmd-button btn btn-outline-dark">First Character Capital</button>
-      <button type="submit" class="cmd-button btn btn-outline-dark">Copy All Text</button>
-      <button type="submit" class="cmd-button btn btn-outline-dark">Character Count</button>
-      <button type="submit" class="cmd-button btn btn-outline-dark">Word Count</button> -->
-    </div>
+  <div class="container-fluid">
+    <a class="navbar-brand">TextInfo</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
   </div>
+</nav>
+
+<!-- Make this navbar as a component -->
+<!-- Pages -> Home -->
+<!-- Pages -> About -->
+<!-- Pages -> History -->
+<!-- Routing -->
+<!-- Service Optional -->
 
 
 
+<!-- ****************************************************** -->
+
+<!-- Step 1 -->
+<!-- History and About HTML isika nicha -->
+<!-- Navbar mai History -> About ka button laga do -->
+<!-- Save Button Laga diya -->
+<!-- Save Working  -->
+<!-- Component -->
+<!-- Routes --> 
+<!-- About | No Functions -->
 
 
-  
+<!-- History | To show data that was saved -->
+                      
+<!-- Home | Save -->
+
+
+<!-- There is no relation with HOME and HISTORY -->
+<!-- If there is no relation and you want to share data then we use service file -->
+
+<!-- Create a service file -->
+<!-- Create a Database which will store all the data once save button is clicked -->
+<!-- Add a function to get the values once the save btn is clicked -->
+<!-- And store the value into our history database -->
+
+
+
+<!--Home-->
+<div class="editor-form">
+  <textarea class="edit-area" #txtArea (input)="getTextInfo(txtArea)" cols="170" rows="15"
+    placeholder="Please Enter Your Text Here..."></textarea>
+  <div class="ctr-btn">
+    
+    <!-- You need to have a save button -->
+
+    <app-btn (clicked)="upperCase(txtArea)" [btnTxt]="'Capitilize All Text'"></app-btn>
+
+    <app-btn (clicked)="lowerCase(txtArea)" [btnTxt]="'Lower All Text'"></app-btn>
+
+    <app-btn (clicked)="firstCaseCapital(txtArea)" [btnTxt]="'First Character Capital'"></app-btn>
+
+    <app-btn (clicked)="copy(txtArea)" [btnTxt]="'Copy'"></app-btn>
+
+    <app-btn [btnTxt]="'Character Count : ' + charCount"></app-btn>
+
+    <app-btn [btnTxt]="'Word Count : ' + wordCount"></app-btn>
+
+  </div>
+</div>
+
+<!-- console.log("Hi I am " + name) -->
