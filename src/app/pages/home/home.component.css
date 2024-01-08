@@ -1,0 +1,29 @@
+nav {
+    height: 80px;
+    padding: 0 40px;
+  }
+  
+  .editor-form {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7e7b7b;
+  }
+  
+  .edit-area {
+    padding: 15px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .ctr-btn {
+    margin-top: 30px;
+  }
+  
+ 
+  

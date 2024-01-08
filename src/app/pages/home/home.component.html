@@ -1,0 +1,25 @@
+<!--Home-->
+<div class="editor-form">
+    <textarea class="edit-area" #txtArea (input)="getTextInfo(txtArea)" cols="170" rows="15"
+      placeholder="Please Enter Your Text Here..."></textarea>
+    <div class="ctr-btn">
+  
+      <!-- You need to have a save button -->
+  
+      <app-btn (clicked)="upperCase(txtArea)" [btnTxt]="'Capitilize All Text'"></app-btn>
+  
+      <app-btn (clicked)="lowerCase(txtArea)" [btnTxt]="'Lower All Text'"></app-btn>
+  
+      <app-btn (clicked)="firstCaseCapital(txtArea)" [btnTxt]="'First Character Capital'"></app-btn>
+  
+      <app-btn (clicked)="copy(txtArea)" [btnTxt]="'Copy'"></app-btn>
+  
+      <app-btn [btnTxt]="'Character Count : ' + charCount"></app-btn>
+  
+      <app-btn [btnTxt]="'Word Count : ' + wordCount"></app-btn>
+  
+      <app-btn (clicked)="save(txtArea)" [btnTxt]="'Save'"></app-btn>
+  
+  
+    </div>
+  </div>
